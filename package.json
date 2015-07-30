@@ -1,0 +1,33 @@
+{
+  "name": "poe-static",
+  "version": "0.1.0",
+  "description": "generate static websites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poegroup/poe-static.git"
+  },
+  "author": "Cameron Bytheway <bytheway.cameron@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poegroup/poe-static/issues"
+  },
+  "homepage": "https://github.com/poegroup/poe-static#readme",
+  "dependencies": {
+    "glob": "^5.0.13"
+  },
+  "peerDependencies": {
+    "extract-text-webpack-plugin": "*",
+    "highlight.js": "*",
+    "html-loader": "*",
+    "marked": "*",
+    "jade": "*",
+    "jade-html-loader": "*",
+    "serve": "*",
+    "poe-ui": "*",
+    "yaml-frontmatter-loader": "*"
+  }
+}
