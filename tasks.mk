@@ -10,7 +10,6 @@ build:
 	@mkdir -p build
 
 deploy: compile_static bin/deploy
-	@cp CNAME build
 	@GIT_DEPLOY_DIR=build GIT_DEPLOY_BRANCH=master ./bin/deploy
 
 compile_static: build $(STATIC_TARGETS)
