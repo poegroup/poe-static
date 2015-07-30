@@ -29,7 +29,7 @@ module.exports = function(opts) {
   });
 
   glob(pages + '/**/*.md').forEach(function(source) {
-    page(source, '!./lib/jade-frontmatter-loader!yaml-frontmatter-loader');
+    page(source, '!' + __dirname + '/lib/jade-frontmatter-loader!yaml-frontmatter-loader');
   });
 
   function page(source, loaders) {
