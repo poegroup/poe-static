@@ -28,7 +28,7 @@ bin/deploy:
 	@curl -o $@ https://raw.githubusercontent.com/X1011/git-directory-deploy/master/deploy.sh
 	@chmod +x $@
 
-ROOT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
+ROOT_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
 include $(ROOT_DIR)/node_modules/poe-ui/tasks.mk
 
