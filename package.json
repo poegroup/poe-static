@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/poegroup/poe-static#readme",
   "dependencies": {
+    "diff": "^1.4.0",
     "glob": "^5.0.13"
   },
   "peerDependencies": {
