@@ -12,14 +12,17 @@ build:
 	@mkdir -p build
 
 deploy: compile_static bin/deploy
-	@./bin/deploy
+	@GIT_DEPLOY_BRANCH=$(GIT_DEPLOY_BRANCH) GIT_DEPLOY_DIR=$(GIT_DEPLOY_DIR) ./bin/deploy
 
-compile_static: build $(STATIC_TARGETS)
+compile_static: clean_build build $(STATIC_TARGETS)
 	@echo building assets
 	@foreman run make prod
 
 build/%: src/static/%
 	@cp -r $< $@
+
+clean_build:
+	@rm -rf build
 
 watch:
 	@./node_modules/.bin/webpack --bail --output-path build --watch
@@ -33,4 +36,4 @@ ROOT_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
 include $(ROOT_DIR)/node_modules/poe-ui/tasks.mk
 
-.PHONY: compile_static
+.PHONY: compile_static clean_build
