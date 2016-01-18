@@ -6,7 +6,7 @@ GIT_DEPLOY_BRANCH?=master
 GIT_DEPLOY_DIR?=build
 
 dev: .env build $(STATIC_TARGETS)
-	@foreman start
+	@DISABLE_MIN=1 foreman start
 
 build:
 	@mkdir -p build
