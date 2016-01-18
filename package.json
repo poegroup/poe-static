@@ -1,6 +1,6 @@
 {
   "name": "poe-static",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "generate static websites",
   "main": "index.js",
   "scripts": {
