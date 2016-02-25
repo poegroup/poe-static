@@ -48,7 +48,7 @@ module.exports = function(opts) {
       filename: Path.relative(root, source)
     };
 
-    var loader = plugin.extract('html-loader?attrs=img:src *:style&root=' + root + '/src!jade-html-loader?' + JSON.stringify(opts) + loaders);
+    var loader = plugin.extract('html-loader?attrs=img:src img:data-src *:style&root=' + root + '/src!jade-html-loader?' + JSON.stringify(opts) + loaders);
     builder.module.loaders.push({test: new RegExp(source), loader: loader, loaders: loader});
 
     builder.entry.main.push(source);
